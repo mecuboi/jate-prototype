@@ -33,9 +33,8 @@ module.exports = () => {
         description: 'Just Another Text Editor',
         display: 'standalone',
         background_color: '#ffffff',
-        crossorigin: '',
         start_url: '/',
-        publicPath: './',
+        publicPath: '/',
         fingerprints: false,
         inject: true,
         icons: 
