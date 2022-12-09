@@ -15,9 +15,9 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (id, content) => {
   console.log('PUT to the database');
-  const textDb = await openDB('text', 1);
-  const tx = textDb.transaction('text', 'readwrite');
-  const store = tx.objectStore('text');
+  const contentDb = await openDB('content', 1);
+  const tx = contentDb.transaction('content', 'readwrite');
+  const store = tx.objectStore('content');
   const request = store.put({ id: id, todo: content });
   const result = await request;
   console.log('Text saved to the database', result);
@@ -26,9 +26,9 @@ export const putDb = async (id, content) => {
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log('GET from the database');
-  const textDb = await openDB('text', 1);
-  const tx = textDb.transaction('text', 'readonly');
-  const store = tx.objectStore('text');
+  const contentDb = await openDB('content', 1);
+  const tx = contentDb.transaction('content', 'readonly');
+  const store = tx.objectStore('content');
   const request = store.getAll();
   const result = await request;
   console.log('result.value', result);
