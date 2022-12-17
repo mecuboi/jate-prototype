@@ -1,5 +1,7 @@
 # JATE Prototype
 
+![HOMEPAGE](./images/screenshot.png)
+
 ## Description
 
 This is an online text editor that resembles your favorite coding partner software: visual studio code
